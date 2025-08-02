@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo Tracking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="	https://www.pngmart.com/files/23/Github-Logo-PNG.png" onclick="window.location.href='index.html'" alt="Logo" class="logo-img">
+            <span class="logo-text" onclick="window.location.href='index.html'" >Cargo Tracking</span>
+            <span><h6>(DEMO)</h6></span>
+        </div>
+        
+        <nav class="menu-area">
+            <button class="menu-btn" onclick="openContact()">Contact</button>
+            <!-- <button class="menu-btn" onclick="openLogin()">Login</button> -->
+        </nav>        
+    </header>
+
+    <h1>Cargo Tracking</h1>
+    <div class="form-group">
+        <input type="text" id="searchInput" placeholder="Find by BL invoice or etc.">
+        <button onclick="searchData()">Search</button>
+    </div>
+    <div id="resultModel">
+        <div class="modal-content" id="modalContent">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="popup-title">Cargo Tracking</div>
+            <div class="resultContent resultContent-2col"></div>
+            <button class="print-btn" onclick="printPopup()">🖨️</button>
+            <div class="print-datetime" style="margin-bottom:8px; color:#d46868; font-size:13px;"></div>
+        </div>
+    </div>
+
+    <!-- Contact Popup -->
+    <div id="contactPopup" class="modal-bg" style="display:none;">
+        <div class="modal-content" style="max-width:500px;">
+            <span class="close-btn" onclick="closeContact()">&times;</span>
+            <div class="popup-title">Contact</div>
+            <div style="margin-bottom:10px;">
+                <b>Name:</b> Mr. Suriya   Kawephimoei (THE KEK)<br>
+                <b>Address:</b> 49/30 Moo 5, Laem Chabang Industrial Estate, Thoung-Sukha, Sriracha, Chonburi 20230 THAILAND (IEAT-2)<br>
+                <b>Tel:</b> 038-401-901 Ext.137<br>
+                <b>Fax:</b> 038-401-441<br>
+                <b>Email:</b> suriya.kaewphimoei@nipponexpress.com<br>
+                    <b>Urgent contact Tel:</b><br>
+                    <div style="text-align: center;">
+                        <a href="https://page.line.me/536obdfz" target="_blank">
+                            <img src="https://qr-official.line.me/gs/M_536obdfz_GW.png?from=page&searchId=536obdfz" 
+                                style="width: 150px; height:auto;" alt="LINE QR"></a><br>
+                    </div>
+                <b>Website:</b> <a href="https://www.nipponexpress.com" target="_blank">www.nipponexpress.com</a><br>
+        </div>
+    </div>
+    <!-- Login Popup -->
+    <div id="loginPopup" class="modal-bg" style="display:none;">
+        <div class="modal-content" style="max-width:350px;">
+            <span class="close-btn" onclick="closeLogin()">&times;</span>
+            <div class="popup-title">Login</div>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+                <input type="text" id="loginId" placeholder="User ID" required style="width:100%;margin-bottom:10px;border:2px solid #89a8d6;border-radius:30px;padding:10px 18px;font-size:1rem;box-sizing:border-box;outline:none;background:transparent;">
+                <input type="password" id="loginPass" placeholder="Password" required style="width:100%;margin-bottom:16px;border:2px solid #89a8d6;border-radius:30px;padding:10px 18px;font-size:1rem;box-sizing:border-box;outline:none;background:transparent;">
+                <button type="submit" style="width:100%;">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+
+    </script>
+</body>
+</html>
