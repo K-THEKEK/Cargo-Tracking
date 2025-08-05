@@ -44,7 +44,7 @@ function searchData() {
                         <span><strong>Invoice No.: </strong> ${match.INVOICE || "-"}</span>
                         <span><strong>Quantity : </strong> ${match.TYPE || "-"}</span>
                         <span style="grid-column: 1 / span 2;">
-                            <strong>Container NO.No.: </strong> ${match.CntrNo || "-"}
+                            <strong>Container NO.: </strong> ${match.CntrNo || "-"}
                         </span>
                     </div>
                 </div>
@@ -226,3 +226,4 @@ window.addEventListener('DOMContentLoaded', () => {
         return false;
 
     }
+
