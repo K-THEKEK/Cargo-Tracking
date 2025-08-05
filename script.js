@@ -41,9 +41,10 @@ function searchData() {
                         <span><strong>Cnee Code : </strong> ${match.Cnee || "-"}</span>
                         <span><strong>House BL : </strong> ${match.HBL || "-"}</span>
                         <span><strong>Master BL : </strong> ${match.MBL || "-"}</span>
+                        <span><strong>Invoice No.: </strong> ${match.INVOICE || "-"}</span>
                         <span><strong>Quantity : </strong> ${match.TYPE || "-"}</span>
                         <span style="grid-column: 1 / span 2;">
-                            <strong>Invoice No.: </strong> ${match.INVOICE || "-"}
+                            <strong>Container NO.No.: </strong> ${match.CntrNo || "-"}
                         </span>
                     </div>
                 </div>
@@ -223,4 +224,5 @@ window.addEventListener('DOMContentLoaded', () => {
             alert("รหัสผ่านหรือชื่อผู้ใช้ไม่ถูกต้อง");
         }
         return false;
+
     }
