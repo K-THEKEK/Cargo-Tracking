@@ -22,7 +22,7 @@ function searchData() {
     db.ref('cargo').once('value', snapshot => {
         const data = snapshot.val();
         if (!data) {
-            alert("Data not found");
+            alert("Data not found (Please specify the Job no., BL no. and invoice correctly.)");
             return;
         }
         // ค้นหา row ที่ตรงกับ keyword
@@ -226,6 +226,7 @@ window.addEventListener('DOMContentLoaded', () => {
         return false;
 
     }
+
 
 
 
